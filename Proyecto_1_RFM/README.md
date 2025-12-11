@@ -34,12 +34,13 @@ La segmentación RFM se realizó utilizando el método de cuantiles (quintiles) 
 | **01 - Campeones/Leales** | Alto (4, 5) | Alto (4, 5) | Alto/Medio | 879 |
 | **03 - Clientes Potenciales** | Medio (3) | Alto (3, 4) | Alto/Medio | 746 |
 
-**Distribución de Clientes por Segmento RFM**
+## Distribución de Clientes por Segmento RFM
 
 La siguiente visualización, generada por Matplotlib/Seaborn, muestra la distribución de los 5,878 clientes únicos totales:
-![Distribución de Clientes por Segmento RFM] (./Matplotlib_Proyecto_N°1.jpg)
 
-> **Fuente de Datos**: *UCI Machine Learning Repository. (2020). Online Retail II*. Obtenido de https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci [cite: 1].
+![Distribución de Clientes por Segmento RFM](Matplotlib_Proyecto_1_Distribucion_RFM.jpg)
+
+Fuente de Datos: UCI Machine Learning Repository. (2020). Online Retail II. Obtenido de https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci
 
 ---
 
@@ -48,7 +49,7 @@ La siguiente visualización, generada por Matplotlib/Seaborn, muestra la distrib
 Este análisis se llevó a cabo siguiendo las siguientes fases:
 
 1.  **Fase 1: Adquisición y Limpieza de Datos:**
-    * [cite_start]Carga del *dataset* `online_retail.csv`[cite: 1].
+    * Carga del dataset `online_retail.csv`. **(Fuente: UCI Machine Learning Repository. (2020). Online Retail II)**
     * Eliminación de valores nulos en la columna `Customer ID`.
     * Conversión de `InvoiceDate` a formato `datetime` y `Customer ID` a formato `int`.
     * Cálculo de la columna de ingresos (`Sales = Quantity * Price`).
@@ -74,7 +75,7 @@ La estructura del directorio para este proyecto es la siguiente:
 Data_Analysis_Projects/
 └── Proyecto_1_RFM/
    ├── online_retail.py                  # Script principal de Python (Análisis RFM).
-   ├── Matplotlib_Proyecto_N°1.jpg       # Visualización de la distribución de segmentos.
+   ├── Matplotlib_Proyecto_1_Distribucion_RFM.jpg       # Visualización de la distribución de segmentos.
    ├── README.md                         # Descripción del proyecto (este archivo).
    ├── Citación_Proyecto_N°1_dataset.txt # Fuente de datos citada.
    └── online_retail.csv                 # Archivo de datos de entrada (no subido al repo por tamaño).
