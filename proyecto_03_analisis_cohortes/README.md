@@ -93,7 +93,7 @@ Para mantener el repositorio limpio y seguro, se excluyen los siguientes archivo
 * `config.py` (Contiene credenciales sensibles)
 * `retencion_datos_largos.csv` (Archivo generado por el script y potencialmente grande)
 * `__pycache__/`
-```
+
 
 ---
 
