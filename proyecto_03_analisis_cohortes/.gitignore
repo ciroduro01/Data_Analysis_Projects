@@ -1,0 +1,4 @@
+# Contenido del archivo .gitignore
+config.py
+retencion_datos_largos.csv
+__pycache__
