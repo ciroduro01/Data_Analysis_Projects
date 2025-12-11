@@ -5,7 +5,7 @@
 Este proyecto implementa un proceso de Extracción, Transformación y Carga (ETL) utilizando Python y Pandas para procesar un *dataset* de más de 100,000 *ratings* y 3,600 películas (MovieLens). El objetivo es normalizar estos datos y cargarlos en una base de datos relacional PostgreSQL.
 
 **Resumen Ejecutivo:**
-* **ETL:** Script de Python (`peliculas.py`) que lee múltiples CSV, normaliza la relación N:M de géneros, transforma los *timestamps*[cite: 2], y carga los datos en PostgreSQL.
+* **ETL:** Script de Python (`peliculas.py`) que lee múltiples CSV, normaliza la relación N:M de géneros, transforma los *timestamps*, y carga los datos en PostgreSQL.
 * **Modelado:** Se crea un esquema relacional con tablas para **Películas**, **Géneros**, **Ratings** y **Tags**.
 * **BI:** Se desarrolla un *dashboard* en Power BI conectado a la base de datos para analizar tendencias de calificación y popularidad.
 
@@ -98,24 +98,24 @@ Se utiliza una estructura modular para separar los recursos visuales, los archiv
 
 .
 └── Proyecto2_Peliculas_ETL/
-├── peliculas.py              \# Script principal de ETL
-├── Estructura_Proyecto2.sql \# Creación del esquema DB
-├── Consultas_Proyecto2.sql \# Consultas para BI (SQL)
-├── Código_Adicional_Proyecto2.sql \# Comandos de limpieza (TRUNCATE)
-├── README.md                 \# Documentación del proyecto
+├── peliculas.py              # Script principal de ETL
+├── Estructura_Proyecto2.sql # Creación del esquema DB
+├── Consultas_Proyecto2.sql # Consultas para BI (SQL)
+├── Código_Adicional_Proyecto2.sql # Comandos de limpieza (TRUNCATE)
+├── README.md                 # Documentación del proyecto
 ├── Citación.txt # Citación del Dataset
-├── assets/                   \# Recursos visuales del proyecto
+├── assets/                   # Recursos visuales del proyecto
 |   ├── Proyecto2_Peliculas_Populares.png
 |   ├── Proyecto2_Catalogo_Genero.png
-    ├── Proyecto2_Usuarios_Activos.png
-    ├── Proyecto2_Evolucion_Rating.png
-    ├── Proyecto2_Pelicula_Etiquetada.png
-|   └── Proyecto2_Diagrama.png         \# Diagrama del modelo relacional
-├── data/                     \# (IGNORADO) Archivos fuente CSV
+|   ├── Proyecto2_Usuarios_Activos.png
+|   ├── Proyecto2_Evolucion_Rating.png
+|   ├── Proyecto2_Pelicula_Etiquetada.png
+|   └── Proyecto2_Diagrama.png         # Diagrama del modelo relacional
+├── data/                     # (IGNORADO) Archivos fuente CSV
 |   ├── movies.csv
 |   ├── ratings.csv
 |   └── tags.csv
-└── config.py                 \# (IGNORADO) Credenciales de conexión
+└── config.py                 # (IGNORADO) Credenciales de conexión
 
 ```
 
@@ -134,5 +134,7 @@ Se utiliza una estructura modular para separar los recursos visuales, los archiv
 El *dataset* utilizado para este proyecto es el conjunto de datos **MovieLens**.
 
 F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. https://doi.org/10.1145/2827872.
+
+Descargado de https://grouplens.org/datasets/movielens/latest/
 
 ---
