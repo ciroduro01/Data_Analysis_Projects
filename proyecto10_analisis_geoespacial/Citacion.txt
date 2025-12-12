@@ -1,0 +1,5 @@
+Citación del Proyecto N°10 (UK Road Safety: Traffic Accidents and Vehicles)
+
+Descargado el archivo "Accident_Information.csv" de la página de Kaggle: https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles
+
+El archivo fue renombrado como "Accidents.csv".
