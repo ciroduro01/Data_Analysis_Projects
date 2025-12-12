@@ -1,5 +1,5 @@
 # Proyecto N°9: Predicción de Valor de Viviendas (Regresión)
-
+---
 ## **Implementación y Validación de un Modelo de Regresión para Predecir el Valor Mediano de Viviendas en California.**
 
 ---
@@ -25,10 +25,10 @@ La arquitectura se divide en tres fases principales: Adquisición y EDA, Modelad
 
 #### Visualizaciones Clave de EDA
 * **Gráfico 1: Matriz de Correlación**
-    * **[Matriz de Correlación](assets/Heatmap_Correlacion.png)**
+![Matriz de Correlación](assets/Heatmap_Correlacion.png)
     * **Análisis:** Confirma que el **Ingreso Mediano (`MedInc`)** es el predictor con mayor correlación positiva.
 * **Gráfico 2: Dispersión Geográfica**
-    * **[Dispersión Geográfica](assets/Distribucion_Vivienda.png)**
+![Dispersión Geográfica](assets/Distribucion_Vivienda.png)
     * **Análisis:** Visualiza la concentración de precios altos cerca de la costa, crucial para la justificación del modelo.
 
 ### Machine Learning (modelado_regresion2.py)
@@ -72,7 +72,7 @@ El repositorio sigue la siguiente estructura de directorios:
 
 ```
 
-.
+proyecto09_predicciones_viviendas
 ├── .gitignore                      # Archivo de configuración.
 ├── housing.py                      # Script de Adquisición de datos.
 ├── eda_regresion.py                # Script de EDA y Matplotlib.
