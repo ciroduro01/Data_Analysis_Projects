@@ -1,0 +1,4 @@
+# Contenido del archivo .gitignore
+config.py
+segmentacion_usuarios.csv
+segmentacion_final_para_bi.csv
