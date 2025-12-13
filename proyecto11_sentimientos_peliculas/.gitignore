@@ -1,0 +1,4 @@
+# Archivo .gitignore
+config.py
+IMDB_Dataset.csv
+sentimientos_predichos_bi.csv

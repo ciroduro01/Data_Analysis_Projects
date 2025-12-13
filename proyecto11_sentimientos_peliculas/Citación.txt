@@ -1,0 +1,4 @@
+Citación del Proyecto N°11 (Sentimientos de Reseñas de Películas)
+IMDB Movie Reviews
+El dataset fue descargado de: https://www.kaggle.com/datasets/vishakhdapat/imdb-movie-reviews
+La licencia es MIT.
