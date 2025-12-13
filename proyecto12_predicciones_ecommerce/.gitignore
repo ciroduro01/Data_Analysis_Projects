@@ -1,0 +1,4 @@
+# El archivo .gitignore
+config.py
+online_retail.csv
+ecommerce_predicciones_bi.csv
