@@ -49,9 +49,6 @@ Este proyecto implementa una solución completa de **Machine Learning (ML)** y *
 3.  **Modelado:** Se utiliza la **Regresión Logística** para la clasificación binaria de sentimientos.
 4.  **Persistencia:** La función `insertar_resultados()` guarda el `Texto_Original`, el `Sentimiento_Predicho` y la `Probabilidad_Positiva` en la tabla **`resultados_prediccion`** de PostgreSQL, utilizando los parámetros de **`config.py`** de forma segura.
 
-**Esquema de Base de Datos (PostgreSQL):**
-![Esquema de la Base de Datos](assets/esquema_sentimientos_db.png)
-
 ## Estructura del Proyecto
 
 La carpeta `proyecto11_sentimientos_peliculas` contiene los siguientes archivos:
