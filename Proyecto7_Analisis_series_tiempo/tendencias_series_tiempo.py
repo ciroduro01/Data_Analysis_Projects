@@ -40,7 +40,6 @@ def exportar_tendencias_csv(db_name, user, password, host):
         
         df = pd.DataFrame(data, columns=column_names)
         # Reemplazamos valores nulos (NaN) por 0, específicamente en las columnas que causan problemas
-        # Esto elimina la fuente del error de desbordamiento (1,5E+20)
         df['rating_promedio_mensual'] = df['rating_promedio_mensual'].fillna(0)
         df['ratings_totales_mensuales'] = df['ratings_totales_mensuales'].fillna(0)
         df['ratings_acumulados_historicos'] = df['ratings_acumulados_historicos'].fillna(0)
