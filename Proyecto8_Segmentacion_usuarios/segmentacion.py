@@ -39,7 +39,7 @@ def exportar_segmentacion_csv():
         
         df = pd.DataFrame(data, columns=column_names)
         
-        # Eliminar filas con valores nulos (NaN): Esto es vital para el clustering, ya que K-Means no acepta nulos.
+        # Eliminar filas con valores nulos (NaN): Esto es fundamental para el clustering, ya que K-Means no acepta nulos.
         df.dropna(inplace=True) 
         
         # Guardamos el archivo ya limpio para el EDA y el Clustering
