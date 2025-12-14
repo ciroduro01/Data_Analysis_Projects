@@ -42,8 +42,8 @@ La lógica principal reside en una consulta SQL compleja diseñada para "alargar
 El proyecto genera tres gráficos esenciales para entender el valor y la permanencia del usuario:
 
 ### 1. Matriz de Retención (Heatmap)
-* **Tipo:** Matriz con Formato Condicional (Mapa de Calor).
-* **Uso:** Muestra visualmente el **`[Porcentaje de Retención]`** por `cohorte_mes` (Filas) a lo largo del `desfase_meses` (Columnas). La intensidad del color indica la tasa de retención.
+* **Tipo:** Matriz con Formato Condicional.
+* **Uso:** Muestra visualmente el **`[Porcentaje de Retención]`** por `cohorte_mes` (Filas) a lo largo del `desfase_meses` (Columnas).
 
 ![Heatmap de Retención por Cohorte](assets/heatmap_retencion.png)
 
