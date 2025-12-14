@@ -47,7 +47,7 @@ El proyecto genera tres gráficos esenciales para entender el valor y la permane
 
 ![Heatmap de Retención por Cohorte](assets/heatmap_retencion.png)
 
-### 2. Gráfico de Barras de Cohortes
+### 2. Gráfico de Columnas de Cohortes
 * **Tipo:** Gráfico de Columnas Agrupadas.
 * **Uso:** Muestra el **`[Usuarios Iniciales]`** de cada cohorte. Indica qué cohortes tienen un tamaño muestral significativo.
 
@@ -68,7 +68,7 @@ El proyecto mantiene una estructura clara para la reproducibilidad:
 ```
 
 Data_Analysis_Projects
-└── proyecto_03_analisis_cohortes/  <-- Carpeta raíz del Proyecto N°3
+└── proyecto_03_analisis_cohortes/  #Carpeta raíz del Proyecto N°3
     ├── assets/
     │   ├── heatmap_retencion.png
     │   ├── promedio_rating.png
@@ -84,9 +84,7 @@ Data_Analysis_Projects
 
 ```
 
----
-
-## Archivos Excluidos (Vía `.gitignore`)
+**Archivos Excluidos (Vía `.gitignore`)**
 
 Para mantener el repositorio limpio y seguro, se excluyen los siguientes archivos:
 
@@ -103,7 +101,7 @@ Las siguientes conclusiones se derivan del análisis de las tendencias observada
 
 * **Alto Desfase Inicial:** Existe una caída de retención significativa entre el Mes 0 y el Mes 1 en todas las cohortes, lo que sugiere una **fuga de usuarios de baja fricción**. Se requiere optimizar la experiencia de "Onboarding" para aumentar el valor percibido rápidamente.
 * **Estabilización de Usuarios Leales:** La tasa de retención tiende a estabilizarse a partir del Mes 4. Los usuarios que permanecen más allá de este punto representan la **base de usuarios leales (Core Users)** del servicio.
-* **Efecto del Volumen en la Calidad:** Las cohortes con el mayor volumen de adquisición (Gráfico de Barras) no siempre presentan la mejor retención o el rating promedio más alto (Gráfico de Líneas). **Recomendación:** Concentrar los esfuerzos de marketing en canales que atraigan usuarios con alta propensión a la retención, no solo alto volumen.
+* **Efecto del Volumen en la Calidad:** Las cohortes con el mayor volumen de adquisición (Gráfico de Columnas) no siempre presentan la mejor retención o el rating promedio más alto (Gráfico de Líneas). **Recomendación:** Concentrar los esfuerzos de marketing en canales que atraigan usuarios con alta propensión a la retención, no solo alto volumen.
 * **Deterioro del Rating:** Se observa que el promedio de calificación de las películas (Rating) puede disminuir ligeramente a medida que el usuario permanece más tiempo. Esto indica una posible necesidad de mejorar el **algoritmo de recomendación** para usuarios con mayor antigüedad.
 
 ---
