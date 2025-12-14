@@ -68,7 +68,7 @@ El proyecto mantiene una estructura clara para la reproducibilidad:
 ```
 
 Data_Analysis_Projects
-└── proyecto_03_analisis_cohortes/  #Carpeta raíz del Proyecto N°3
+└── Proyecto3_analisis_cohortes/  #Carpeta raíz del Proyecto N°3
     ├── assets/
     │   ├── heatmap_retencion.png
     │   ├── promedio_rating.png
