@@ -67,10 +67,10 @@ K_OPTIMO = 4
 kmeans_final = KMeans(n_clusters=K_OPTIMO, random_state=42, n_init='auto')
 kmeans_final.fit(df_escalado)
 
-# Asignar las etiquetas de cluster al DataFrame original (df_segmentacion): Esto es crucial, ya que necesitamos los valores originales para el análisis final.
+# Asignar las etiquetas de cluster al DataFrame original (df_segmentacion): Esto es fundamental, ya que necesitamos los valores originales para el análisis final.
 df_segmentacion['Cluster'] = kmeans_final.labels_
 
-# Analizar los Centros de Cluster (La 'firma' de cada segmento): Hacemos el análisis sobre los datos ESCALADOS (para ver cómo se separan)
+# Analizar los Centros de Cluster (La 'firma' de cada segmento): Hacemos el análisis sobre los datos escalados (para ver cómo se separan)
 centros_escalados = pd.DataFrame(kmeans_final.cluster_centers_, columns=df_escalado.columns)
 
 # Invertir la transformación logarítmica y el escalado: Para interpretar los centros, los convertiremos de nuevo a sus valores originales (ej. días, conteo)
