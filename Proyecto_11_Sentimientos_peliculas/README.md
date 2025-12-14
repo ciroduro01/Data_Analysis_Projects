@@ -50,7 +50,7 @@ Este proyecto implementa una solución completa de **Machine Learning (ML)** y *
 
 ## Estructura del Proyecto
 
-La carpeta `proyecto11_sentimientos_peliculas` contiene los siguientes archivos:
+La carpeta `Proyecto_11_Sentimientos_peliculas` contiene los siguientes archivos:
 
 | Archivo/Carpeta | Propósito | Notas de Ingeniería de Datos |
 | :--- | :--- | :--- |
