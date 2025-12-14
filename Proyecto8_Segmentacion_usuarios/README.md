@@ -54,7 +54,7 @@ La narrativa de Power BI se centra en la distribución de la base de usuarios y 
 
 ```
 
-proyecto_08_segmentacion_usuarios/
+Proyecto8_Segmentacion_usuarios/
 ├── assets/
 │   ├── distribucion_eda.png            # Histograma de distribuciones (EDA)
 │   ├── metodo_codo.png                 # Gráfico del Método del Codo (ML)
