@@ -49,7 +49,7 @@ El proyecto genera tres gráficos esenciales para entender el valor y la permane
 
 ### 2. Gráfico de Barras de Cohortes
 * **Tipo:** Gráfico de Columnas Agrupadas.
-* **Uso:** Muestra el **`[Usuarios Iniciales]`** de cada cohorte. Contextualiza el Heatmap, indicando qué cohortes tienen un tamaño muestral significativo.
+* **Uso:** Muestra el **`[Usuarios Iniciales]`** de cada cohorte. Indica qué cohortes tienen un tamaño muestral significativo.
 
 ![Volumen de Usuarios Iniciales por Cohorte](assets/volumen_cohortes.png)
 
