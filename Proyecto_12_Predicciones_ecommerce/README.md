@@ -72,7 +72,7 @@ El proyecto se ejecutó siguiendo un *pipeline* de **4 Fases**:
 ## Estructura del Proyecto
 
 ```
-proyecto12_predicciones_ecommerce/
+Proyecto_12_Predicciones_ecommerce/
 ├── assets/
 │   ├── dispersion_cantidad.png    
 │   ├── residuos_cantidad.png     
