@@ -64,7 +64,7 @@ El repositorio sigue la siguiente estructura de directorios:
 
 ```
 
-proyecto10_analisis_geoespacial
+Proyecto_10_Analisis_geoespacial_UK
 ├── .gitignore                      # Ignora el CSV de salida.
 ├── accidents2.py                   # Script principal de Ingeniería de Datos y Folium.
 ├── Accidents.csv                   # Dataset original (entrada).
