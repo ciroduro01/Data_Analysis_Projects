@@ -44,7 +44,7 @@ Este gráfico de columnas analiza el comportamiento interanual, promediando la a
 
 ```
 
-proyecto_07_analisis_series_tiempo/
+Proyecto7_Analisis_series_tiempo/
 ├── assets/
 │   ├── curva_crecimiento.png               # Gráfico 1: Crecimiento Acumulado
 │   └── estacionalidad_mensual.png          # Gráfico 2: Estacionalidad Interanual
