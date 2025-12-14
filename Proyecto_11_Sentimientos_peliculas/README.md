@@ -31,7 +31,6 @@ Este proyecto implementa una solución completa de **Machine Learning (ML)** y *
 #### Volumen de Reseñas por Rango de Confianza
 
 * **Hallazgo Clave:** El volumen se concentra en los extremos (alta confianza), con una baja representación en el rango central (40-60%). Esto indica que el modelo es **altamente decisivo** y encuentra pocas reseñas ambiguas.
-* **Nota Técnica:** Se implementó la función DAX `VALUE()` para resolver el problema de tipo de dato (Texto a Número) en la columna calculada `Rango_Confianza`.
 ![Rango de Confianza (Power BI)](assets/rango_confianza.png)
 
 ### Gráficos de Validación (Matplotlib)
