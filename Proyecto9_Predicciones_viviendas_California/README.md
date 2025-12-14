@@ -72,7 +72,7 @@ El repositorio sigue la siguiente estructura de directorios:
 
 ```
 
-proyecto09_predicciones_viviendas
+Proyecto9_Predicciones_viviendas_California
 ├── .gitignore                      # Archivo de configuración.
 ├── housing.py                      # Script de Adquisición de datos.
 ├── eda_regresion.py                # Script de EDA y Matplotlib.
