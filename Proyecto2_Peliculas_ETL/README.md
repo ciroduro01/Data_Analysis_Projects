@@ -44,7 +44,7 @@ Las siguientes visualizaciones clave fueron creadas en Power BI, conectadas dire
 ![Evolución del Rating Promedio Anual](assets/Proyecto2_Evolucion_Rating.png)
 
 ### 5. Película Más Etiquetada en 2015
-**Descripción:** Muestra la película con mayor interacción por tags para un año específico.
+**Descripción:** Muestra la película con mayor interacción por etiquetas o *tags* para un año específico.
 ![Película Más Etiquetada en 2015](assets/Proyecto2_Pelicula_Etiquetada.png)
 
 ---
