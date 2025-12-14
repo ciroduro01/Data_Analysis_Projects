@@ -73,7 +73,7 @@ La estructura del directorio para este proyecto es la siguiente:
 ```
 
 Data_Analysis_Projects/
-└── Proyecto_1_RFM/
+└── Proyecto1_RFM/
    ├── online_retail.py                  # Script principal de Python (Análisis RFM).
    ├── Matplotlib_Proyecto_1_Distribucion_RFM.jpg       # Visualización de la distribución de segmentos.
    ├── README.md                         # Descripción del proyecto (este archivo).
