@@ -51,7 +51,7 @@ La siguiente estructura garantiza la ejecución ordenada de la base de datos:
 
 ```
 
-proyecto_05_implementacion_sql_avanzado/
+Proyecto5_Implementacion_SQL_avanzado/
 ├── 01_inserts_maestras.sql           # Datos iniciales para tablas dimensionales
 ├── 02_inserts_transaccionales.sql    # Datos para órdenes, productos y listas de materiales
 └── 03_consultas_analiticas.sql       # Consultas SQL analíticas de alto valor (Fase 2)
