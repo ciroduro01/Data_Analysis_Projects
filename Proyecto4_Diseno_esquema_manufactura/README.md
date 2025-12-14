@@ -48,7 +48,7 @@ El diseño cumple con los requisitos de normalización para asegurar la integrid
 
 ## Archivos del Proyecto
 ```
-proyecto_04_diseno_esquema_manufactura/
+Proyecto4_Diseno_esquema_manufactura/
 ├── assets/
 │   └── manufactura_db.png      # Diagrama Entidad-Relación (DER)
 ├── Estructura_Proyecto N°4.sql   # Sentencias CREATE TABLE (Lógica del diseño)
