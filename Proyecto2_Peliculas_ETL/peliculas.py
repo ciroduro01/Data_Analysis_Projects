@@ -19,7 +19,7 @@ try:
     
     print("Archivos cargados exitosamente.")
     
-    # NOTA: Normalizar nombres de columna a minúsculas  para coincidir con el esquema de PostgreSQL (que es case-insensitive)
+    # NOTA: Normalizar nombres de columna a minúsculas  para coincidir con el esquema de PostgreSQL (que es caso-insensible)
     df_movies.columns = df_movies.columns.str.lower()
     df_ratings.columns = df_ratings.columns.str.lower()
     df_tags.columns = df_tags.columns.str.lower()
