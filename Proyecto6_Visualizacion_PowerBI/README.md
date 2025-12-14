@@ -47,7 +47,7 @@ Este gráfico de anillo evalúa el riesgo en la cadena de suministro al cuantifi
 
 ```
 
-proyecto_06_visualizacion_powerbi/
+Proyecto6_Visualizacion_PowerBI/
 ├── assets/
 │   ├── manufactura_db_esquema.png      # Esquema de la Base de Datos manufactura_db
 │   ├── costo_producto.png              # Gráfico 1: Costo Unitario
