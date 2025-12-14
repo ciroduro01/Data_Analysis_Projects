@@ -112,8 +112,8 @@ insertar_datos_en_bd(df, config.TABLE_NAME)
 
 print("\n--- FASE 3 (FINAL): Regresión Logarítmica para CANTIDAD ---")
 
-# Definir variables y aplicar Log-Transformación a la CANTIDAD (Y)
-# Queremos predecir la CANTIDAD (Quantity)
+# Definir variables y aplicar Log-Transformación a la cantidad (Y)
+# Queremos predecir la cantidad (Quantity)
 X = df[['UnitPrice', 'Country', 'DiaSemana']]
 y_log_quantity = np.log1p(df['Quantity']) # Aplicamos Log a la Cantidad
 
@@ -168,7 +168,7 @@ df_test_results = df_test_results[df_test_results['ValorTotalReal'] < 200]
 print(f"Resultados de predicción preparados para visualización.")
 
 # Visualización del Rendimiento (Matplotlib)
-# Gráfico de Dispersión: Cantidad Real vs. Cantidad Predicha (Ahora se verá mucho mejor)
+# Gráfico de Dispersión: Cantidad Real vs. Cantidad Predicha
 plt.figure(figsize=(10, 6))
 sns.scatterplot(
     x='CantidadReal', 
