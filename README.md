@@ -1,4 +1,4 @@
-## **Portafolio Profesional de Data Science y Análisis Avanzado**
+## **Portafolio Profesional de Data Science y Análisis Avanzado** (Español)
 
 ### **Introducción**
 
@@ -70,5 +70,80 @@ El *stack* tecnológico demuestra familiaridad con herramientas esenciales para 
 ### **5. Licencia**
 
 Este proyecto está bajo la licencia **MIT**. Eres libre de usar, modificar y distribuir el código con la atribución adecuada, **siempre y cuando se cite al autor original del repositorio.**
+
+---
+
+## **Data Science and Advanced Analytics Professional Portfolio** (English)
+
+### **Introduction**
+
+This repository is a portfolio of Data Science projects demonstrating end-to-end expertise in the data lifecycle: **Data Engineering (SQL/PostgreSQL)**, **Business Analytics (BI/Power BI)**, and **Machine Learning (Supervised/Unsupervised Modeling, NLP)**. The projects focus on translating raw data into business intelligence and implementing robust predictive solutions, with a strong emphasis on **error diagnosis** and **executive value**.
+
+---
+
+### **1. Executive Summary**
+
+|Field | Key Skills and Demonstration | Projects |
+| --- | --- | --- |
+| **Data Engineering and Databases** | Third Normal Form (3NF) schema design, ETL with Python (`psycopg2` and bulk loading), Use of SQL Window Functions and CTEs | Manufacturing and ETL Projects |
+| **Machine Learning** | Regression Modeling (Random Forest, Logarithmic), Clustering (K-Means), Classification and Vectorization, NLP (TF-IDF) | Segmentation, Prediction, and Sentiment Projects |
+| **Business Intelligence (BI)** Analysis | Cohort Analysis, RFM Segmentation, Executive Dashboard Creation, and Advanced Model Error Diagnostics (Heteroscedasticity, Geographic Bias) | RFM, Cohort, and E-commerce Projects |
+| **Specialized Analysis** | Time Series (Trend and Seasonality) and Geospatial Analysis (Folium/Heat Maps, Temporal Risk) | Time Series and Geospatial Projects
+
+---
+
+### **2. Tools and Languages**
+
+This portfolio demonstrates familiarity with essential tools for production and advanced analysis:
+
+* **Languages**: **Python**, **SQL** (PostgreSQL).
+* **Core Libraries**: Pandas, NumPy, Scikit-learn, NLTK, Psycopg2.
+* **Databases**: PostgreSQL.
+* **Visualization and BI**: Power BI, Matplotlib, Seaborn, Folium.
+* **Methodology**: Secure credential management (`config.py`), 3NF normalization, M:N relationship modeling.
+
+---
+
+### **3. Projects Grouped by Domain (12 Projects)**
+
+#### **A. Data Engineering and Databases (SQL/ETL)**
+
+* **Project N°4**: Schema Design and Normalization for Manufacturing (3NF, BOM Modeling).
+* **Project N°5**: Implementation and Advanced Analytical Queries (SQL) for costing and supply risk.
+* **Project N°2**: ETL and Data Analysis of Films (Bulk Load with `psycopg2`).
+
+#### **B. Machine Learning and Predictive Modeling**
+
+* **Project N°12**: E-commerce Sales Volume Prediction with Heteroscedasticity and Geographic Bias Analysis.
+* **Project N°9**: Housing Value Prediction (Regression with Random Forest), high R² score.
+* **Project N°8**: Segmentation and Clustering Analysis (K-Means) on RFM Metrics.
+* **Project N°11**: Sentiment Analysis in Reviews (NLP) using TF-IDF and Classification.
+
+#### **C. Business Intelligence and Business Analytics**
+
+* **Project N°6**: Business Intelligence Dashboard with Power BI for Manufacturing Executive Decisions.
+* **Project N°3**: User Value and Retention Analysis by Cohort.
+* **Project N°1**: Customer Segmentation Analysis (Classic RFM).
+
+#### **D. Specialized Analysis (Time Series and Geospatial)**
+
+* **Project N°7**: Time Series and Trend Analysis (SQL Window Functions and Growth Curve).
+* **Project N°10**: Geospatial Analysis of Traffic Accidents (Folium/HeatMaps) and Identification of Hourly Risk.
+
+---
+
+### **4. How to Use the Repository**
+
+1. **Clone the Repository**: Use the standard `git clone` command and the repository URL.
+2. **Setup and Data Files**: Due to the use of `.gitignore` files in each subdirectory, the repository does NOT contain the original datasets (CSV) or the `config.py` credentials file.
+**Required Action**: To run the scripts, the user must obtain the datasets listed in the README.md file for each project and create a `config.py` file with their own PostgreSQL credentials.
+3. **Running Scripts**: Install the Python dependencies (listed in the README.md file for each project). Run the main script for each project (e.g., the script for Project 12 is `python ecommerce.py`).
+4. **Visualization and Analysis (Power BI)**: The output of the scripts (output `.csv` files or the final PostgreSQL table) is used as the data source for generating Power BI dashboards.
+
+---
+
+### **5. License**
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute the code with proper attribution, provided you cite the original author of the repository.
 
 ---
