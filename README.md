@@ -39,7 +39,7 @@ El *stack* tecnológico demuestra familiaridad con herramientas esenciales para 
 
 #### **B. Machine Learning y Modelado Predictivo**
 
-* **Proyecto N°12 (Capstone):** Predicción de Cantidad de Ventas de E-commerce con diagnóstico de **Heterocedasticidad y Sesgo Geográfico**.
+* **Proyecto N°12:** Predicción de Cantidad de Ventas de E-commerce con diagnóstico de **Heterocedasticidad y Sesgo Geográfico**.
 * **Proyecto N°9:** Predicción de Valor de Viviendas (Regresión con Random Forest), alto R^2 Score.
 * **Proyecto N°8:** Análisis de Segmentación y Clustering (K-Means) sobre métricas RFM.
 * **Proyecto N°11:** Análisis de Sentimientos en Reseñas (NLP) usando Tf-idf y Clasificación.
@@ -60,9 +60,10 @@ El *stack* tecnológico demuestra familiaridad con herramientas esenciales para 
 ### **4. Cómo Usar el Repositorio**
 
 1. **Clonar el Repositorio:** Utiliza el comando `git clone` estándar y la URL del repositorio.
-2. **Configuración de la Base de Datos:** Para proyectos de DB/ETL (e.g., P2, P3, P12), se requiere una instancia de **PostgreSQL**. Las credenciales se gestionan de forma segura en un archivo local `config.py` (excluido en el `.gitignore`).
-3. **Ejecución de Scripts:** Instala las dependencias de Python (listadas en el `README.md` de cada proyecto). Ejecuta el script principal (`python nombre_del_script.py`).
-4. **Visualización:** Los archivos de salida (`.csv` finales) se utilizan como *input* para la generación de la mayoría de los *dashboards* de Power BI.
+2. **Archivos de Datos y Configuración:** Debido al uso de archivos `.gitignore` en cada subdirectorio, el repositorio NO contiene los datasets originales (CSV) ni el archivo de credenciales `config.py`.
+**Acción Requerida**: Para ejecutar los scripts, el usuario debe obtener los datasets citados en el `README.md` de cada proyecto y crear un archivo `config.py` con sus propias credenciales de PostgreSQL.
+3. **Ejecución de Scripts:** Instala las dependencias de Python (listadas en el `README.md` de cada proyecto). Ejecuta el script principal de cada proyecto (ej. el script del Proyecto 12 es `python ecommerce.py`).
+4. **Visualización y Análisis (Power BI):** El resultado de los scripts (archivos `.csv` de salida o la tabla final de PostgreSQL) se usa como fuente de datos para la generación de los *dashboards* de Power BI.
 
 ---
 
