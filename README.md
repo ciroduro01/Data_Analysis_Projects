@@ -21,7 +21,7 @@ Este repositorio es un portafolio de proyectos de Data Science que demuestra exp
 
 El *stack* tecnológico demuestra familiaridad con herramientas esenciales para la producción y el análisis avanzado:
 
-* **Lenguajes:** **Python** (Dominio), **SQL** (PostgreSQL/MySQL).
+* **Lenguajes:** **Python** (Dominio), **SQL** (PostgreSQL).
 * **Bibliotecas Centrales:** Pandas, NumPy, Scikit-learn, NLTK, Psycopg2.
 * **Bases de Datos:** PostgreSQL.
 * **Visualización y BI:** Power BI, Matplotlib, Seaborn, Folium.
