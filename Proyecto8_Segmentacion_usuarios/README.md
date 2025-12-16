@@ -89,3 +89,96 @@ F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History a
 Descargado de https://grouplens.org/datasets/movielens/latest/
 
 ---
+
+# Project N°8: Segmentation and Clustering Analysis (K-Means)
+
+## 1.Project Objective
+
+Application of K-Means clustering to RFM metrics (Recency, Frequency, Average Rating) to segment the MovieLens user base, identifying four actionable customer profiles for specific business strategies.
+
+---
+
+## 2. Data Science Architecture
+
+### ETL and Feature Engineering (`segmentation.py`)
+* **Key Metrics**: Frequency, Average Rating, and Recency (calculated from the highest rating date).
+* **Security**: Use of `config.py` for secure credential management.
+
+### Exploratory Data Analysis (EDA)
+EDA confirmed highly skewed distributions in Frequency and Recency, justifying the need for logarithmic transformation.
+
+* **Visualization**: Distribution Histogram (`eda_segmentation.py`).
+
+![EDA Distribution Histogram](assets/distribucion_eda.png)
+
+### Machine Learning (`transformation_data.py`)
+Clustering was performed on transformed data (logarithmic and standardized).
+
+* **K Selection**: The Elbow Method validated the selection of **K=4** as the optimal point for clustering.
+
+![Elbow Method for K-Means (K=4)](assets/metodo_codo.png)
+
+* **Result**: The script exported `segmentacion_final_para_bi.csv` with the Cluster label for each user.
+
+---
+
+## 3. Executive Visualization (Power BI)
+
+The Power BI narrative focuses on the distribution of the user base and the visual validation of the segmentation model.
+
+### Chart 1: Segment Distribution (Quantification)
+
+* **Title**: Customer Segment Size for the Strategy
+* **Visual**: Donut Chart
+
+![Customer Segment Size for the Strategy](assets/distribucion_powerbi.png)
+
+### Chart 2: Separation and Strategic Profile (Validation)
+
+* **Title**: Location of Strategic Segments (VIPs and Dormant Segments)
+* **Visual**: Scatter Plot
+* **Key Analysis**: The clear separation of the four groups of points validates the quality of the clustering.
+
+![Location of Strategic Segments](assets/separacion_clusters_powerbi.png)
+
+---
+
+## 4. Repository Structure
+
+```bash
+Proyecto8_Segmentacion_usuarios/
+├── assets/
+│   ├── distribucion_eda.png    # Distribution Histogram (EDA)
+│   ├── metodo_codo.png         # Elbow Method (ML) Chart
+│   ├── distribucion_powerbi.png   # Ring Chart
+│   └── separacion_clusters_powerbi.png # Scatter Chart
+├── config.py # DB Credentials (Best Practices) IGNORED
+├── segmentacion_usuarios.csv   # SQL Output (Clean Data) IGNORED
+├── segmentacion_final_para_bi.csv  # ML Output (With 'Cluster' column), IGNORED
+├── segmentacion.py # ETL: SQL and Feature Engineering
+├── eda_segmentacion.py # EDA: Bias Visualization
+├── .gitignore # IGNORE the config.py file and the CSV files
+├── transformacion_datos.py  # ML: Log, Scaling, K-Means (K=4)
+└── README.md # Final documentation
+```
+
+---
+
+## 5. Conclusions
+
+The analysis has successfully segmented users into four groups with clear behavioral identities. The scatter plot demonstrates that the most critical segments for the business (VIP and Dormant) are located in clearly differentiated quadrants, allowing for precise marketing action:
+
+1. **Retention**: Strategies targeting the VIP Cluster (Cluster 1) to ensure their loyalty and maximize their long-term value.
+2. **Reactivation**: Specific campaigns for the Dormant Cluster (Cluster 0) with the goal of reducing churn.
+
+---
+
+## 6. Dataset Citation
+
+The dataset used for this project is the MovieLens dataset.
+
+F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. https://doi.org/10.1145/2827872.
+
+Downloaded from https://grouplens.org/datasets/movielens/latest/
+
+---
