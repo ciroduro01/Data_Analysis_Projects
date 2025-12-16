@@ -76,3 +76,102 @@ El Proyecto N°11 fue un éxito en la implementación completa de un flujo de tr
 * **Dataset:** IMDB Movie Reviews
 * **Fuente:** El dataset fue descargado de: [https://www.kaggle.com/datasets/vishakhdapat/imdb-movie-reviews](https://www.kaggle.com/datasets/vishakhdapat/imdb-movie-reviews)
 * **Licencia:** MIT.
+
+---
+
+# Project N°11: Sentiment Analysis of Movie Reviews (IMDB)
+
+## 1. Objectives and Summary
+
+This project implements a complete Machine Learning (ML) and Natural Language Processing (NLP) solution on 50,000 movie reviews. The objective was to build a robust classifier (Logistic Regression with Tf-idf), ensure the persistence of results in PostgreSQL, and validate the model's performance by visualizing the distribution and confidence of the predictions in Power BI.
+
+| Metric | Key Value |
+| :--- | :--- |
+| **Original Dataset** | 50,000 Reviews (IMDB) |
+| **Main Model** | Logistic Regression |
+| **Output Balance** | 49.2% Positive / 50.8% Negative |
+| **Persistence** | PostgreSQL (`resultados_prediccion` Table) |
+
+---
+
+## 2. Technologies Used
+
+* **Languages**: Python (version 3.x), SQL (PostgreSQL).
+* **ML/NLP Libraries**: Scikit-learn (Logistic Regression, TF-IDF), NLTK, Pandas, NumPy.
+* **Database**: PostgreSQL (psycopg2).
+* **Visualization**: Matplotlib, Seaborn, and Power BI.
+* **Security**: Use of `config.py` for secure handling of database credentials.
+
+---
+
+## 3. Key Results and Visualizations
+
+### Executive Charts (Power BI)
+
+#### Final Distribution of Predicted Sentiment
+
+* **Key Finding**: Shows a perfect balance, approximately 49.2% Positive / 50.8% Negative, confirming the robustness of the model by maintaining the distribution of the original dataset.
+
+![Predicted Sentiment](assets/sentimientos_predichos.png)
+
+#### Review Volume by Confidence Range
+
+* **Key Finding**: The volume is concentrated at the extremes (high confidence), with low representation in the central range (40-60%). This indicates that the model is highly decisive and finds few ambiguous reviews.
+
+![Confidence Range (Power BI)](assets/rango_confianza.png)
+
+### Validation Plots (Matplotlib)
+
+* **Confusion Matrix**: Validates the model's accuracy by comparing hits (True Positives, True Negatives) and errors (False Positives, False Negatives).
+
+![Confusion Matrix](assets/Matriz_Confusion.png)
+
+* **Sentiment Distribution**: Shows the count of 0 (Negative) and 1 (Positive) predictions.
+
+![Sentiment Distribution](assets/Distribucion_Sentimientos.png)
+
+---
+
+## 4. Procedure and Methodology
+
+1. **Cleaning (NLP)**: The `sentimientos.py` script uses the `limpiar_texto` function to remove HTML tags, stopwords, and punctuation, which is essential for the quality of the text analysis.
+2. **Vectorization**: The cleaned text is transformed into numerical features using the Tf-idf Vectorizer.
+3. **Modeling**: Logistic Regression is used for binary sentiment classification.
+4. **Persistence**: The `insertar_resultados()` function securely saves the `Texto_Original`, `Sentimiento_Predicho`, and `Probabilidad_Positiva` to the `resultados_prediccion` table in PostgreSQL, using the parameters from `config.py`.
+
+---
+
+## 5. Project Structure
+
+The `Proyecto_11_Sentimientos_peliculas` folder contains the following files:
+
+| File/Folder | Purpose | Data Engineering Notes |
+| :--- | :--- | :--- |
+| `sentimientos.py` | Main source code. | Implements the ETL flow and model training. |
+| `config.py` | Database configuration. | EXCLUDED in `.gitignore` for security. |
+| `IMDB_Dataset.csv` | Original dataset. | EXCLUDED. |
+| `sentimientos_predichos_bi.csv` | Output data. | EXCLUDED. |
+| `assets/` | Graphs and Schemas. | Contains all `.png` files (Matplotlib, Power BI). |
+| `.gitignore` | Version Control. | Excludes `config.py` and `.csv` files. |
+
+---
+
+## 6. Conclusions
+
+Project 11 was a success in the complete implementation of a Data Science workflow:
+
+1. **Security**: The security of PostgreSQL credentials is ensured through the use of `config.py`.
+2. **Model Performance**: Confidence charts in Power BI confirm that the model is highly predictive and decisive.
+3. **Integration**: The ability to bring Machine Learning results to a relational database and subsequently to a Business Intelligence tool for executive analysis was demonstrated.
+
+---
+
+## 7. Citation
+
+Citation of Project 11 (Movie Review Sentiments)
+
+Dataset: IMDB Movie Reviews
+Source: The dataset was downloaded from: https://www.kaggle.com/datasets/vishakhdapat/imdb-movie-reviews
+License: MIT.
+
+---
