@@ -58,3 +58,64 @@ Proyecto6_Visualizacion_PowerBI/
 ````
 
 ---
+
+# Project N°6: Business Intelligence Dashboard with Power BI
+
+## 1. Project Objective
+
+The objective of this project is to translate the findings from the SQL analytical queries (Project 5) into a visual and executive-level dashboard using Power BI. This project validates the ability to transform raw data from the `manufactura_db` database into strategic information for managerial decision-making.
+
+---
+
+## 2. Methodology and Connection
+
+The visualization was built by connecting Power BI directly to the PostgreSQL database server to consume the query results.
+
+### Schema Structure
+
+The analysis is based on the normalized relational schema of the `manufactura_db` database:
+
+![Manufactura schema ERD Diagram](assets/manufactura_db_esquema.png)
+
+---
+
+## 3. Key Visualizations
+
+The three main visualizations directly address the needs of manufacturing management and demonstrate the value of a normalized schema:
+
+### Base Material Cost per Unit of Product (Roll-up)
+This bar chart visualizes the material costing metric, a key input for pricing:
+
+![Base Material Cost per Unit of Product (Roll-up)](assets/costo_producto.png)
+
+* **Key Conclusion**: The `Estructura Modular Acero` (*Modular Steel Structure*) is by far the product with the highest material cost, directing attention to optimizing the purchase of its main component.
+
+### Total Committed Material Costs per Order
+This column chart shows the total material cost the company must invest to fulfill orders:
+
+![Total Committed Material Costs per Order](assets/costo_orden.png)
+
+* **Key Conclusion**: The order with the highest committed material cost corresponds to **EcoHome Builders** and **Fitness Gears Inc.**, identifying the orders that require the greatest capital investment.
+
+### Volume of Orders Dependent on Each Subcontractor
+This pie chart assesses supply chain risk by quantifying how many orders depend on each external supplier:
+
+![Volume of Orders Dependent on Each Subcontractor](assets/dependencia_sc.png)
+
+* **Key Finding**: The analysis reveals a critical dependence on the supplier **Electrical Components Z** (40% of orders), a vital finding for risk management and supplier negotiations.
+
+---
+
+## 4. Repository Structure
+
+```bash
+Proyecto6_Visualizacion_PowerBI/
+├── assets/
+│ ├── manufactura_db_esquema.png # Database Schema for manufactura_db
+│ ├── costo_producto.png # Chart 1: Unit Cost
+│ ├── costo_orden.png # Chart 2: Cost per Order
+│ └── dependencia_sc.png # Chart 3: Subcontractor Dependencies
+└── README.md # Project Documentation
+```
+
+---
