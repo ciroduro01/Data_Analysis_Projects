@@ -153,17 +153,38 @@ This portfolio demonstrates familiarity with essential tools for production and 
 
 ---
 
-### **4. How to Use the Repository**
+## 4. Example Visualizations
+To illustrate our portfolio, we'll take a look at four images from different projects to demonstrate the use of various visualization tools.
+
+First, we have the schema diagram for the `manufactura_db` database, from **Project N°6: Business Intelligence Dashboard with Power BI**. The diagram was created using **DBeaver** after connecting to **pgAdmin**.
+
+![ERD Diagram - Project 6 using DBeaver](Proyecto6_Visualizacion_PowerBI/assets/manufactura_db_esquema.png)
+
+On the other hand, in most of our projects we use the **Power BI** tool to visualize and communicate the main *insights* of our work. In this case, we will look at **Project N°11: Sentiment Analysis in Movie Reviews**, and we will see the following pie chart, titled **Final Distribution of Predicted Sentiments**, which shows an almost perfect balance, with both groups separated by their respective colors (green and red).
+
+![Power BI Chart - Project 11](Proyecto_11_Sentimientos_peliculas/assets/sentimientos_predichos.png)
+
+Similarly, in **Project N°10: Geospatial Analysis of Traffic Accidents in the United Kingdom**, we used the **Folium** library to generate two maps representing the severity of accidents in the region. This image, which provides an overview of the accidents, is taken from the HTML file included in the project folder.
+
+![Folium screenshot - Project 10](Proyecto_10_Analisis_geoespacial_UK/folium_uk.png)
+
+Finally, we also worked with the standard visualization library for Python, **Matplotlib**. In **Project N°9: Home Value Prediction**, we used the tool to visualize the geographic distribution of home values ​​in California. As a result, we can observe the concentration of high prices near the region's coast.
+
+![Matplotlib Viz - Proyecto 9](Proyecto9_Predicciones_viviendas_California/assets/Distribucion_Vivienda.png)
+
+---
+
+### **5. How to Use the Repository**
 
 1. **Clone the Repository**: Use the standard `git clone` command and the repository URL.
 2. **Setup and Data Files**: Due to the use of `.gitignore` files in each subdirectory, the repository does NOT contain the original datasets (CSV) or the `config.py` credentials file.
-**Required Action**: To run the scripts, the user must obtain the datasets listed in the README.md file for each project and create a `config.py` file with their own PostgreSQL credentials.
+* **Required Action**: To run the scripts, the user must obtain the datasets listed in the README.md file for each project and create a `config.py` file with their own PostgreSQL credentials.
 3. **Running Scripts**: Install the Python dependencies (listed in the README.md file for each project). Run the main script for each project (e.g., the script for Project 12 is `python ecommerce.py`).
 4. **Visualization and Analysis (Power BI)**: The output of the scripts (output `.csv` files or the final PostgreSQL table) is used as the data source for generating Power BI dashboards.
 
 ---
 
-### **5. License**
+### **6. License**
 
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code with proper attribution, provided you cite the original author of the repository.
 
