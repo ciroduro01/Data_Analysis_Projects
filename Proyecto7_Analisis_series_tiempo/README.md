@@ -51,7 +51,7 @@ Proyecto7_Analisis_series_tiempo/
 ├── config.py                               # Credenciales DB (IGNORAR EN GIT)
 ├── Agregacion_Datos_Proyecto7.sql          # SQL Agregación Temporal
 ├── Tendencias_Acumulativas_Proyecto7.sql   # SQL con Función de Ventana
-├── tendencias_series_tiempo.csv            # Resultado ETL (Input para Power BI)
+├── tendencias_series_tiempo.csv            # Resultado ETL (Input para Power BI) IGNORED
 ├── tendencias_series_tiempo.py             # Script ETL en Python
 └── README.md                               # Documentación del proyecto
 
@@ -66,3 +66,75 @@ El *dataset* utilizado para este proyecto es el conjunto de datos **MovieLens**.
 F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. https://doi.org/10.1145/2827872.
 
 Descargado de https://grouplens.org/datasets/movielens/latest/
+
+---
+
+# Project N°7: Time Series and Trend Analysis (MovieLens)
+
+## 1. Project Objective
+
+The main objective of this project is to analyze the `movielens_db` database to extract time series and trend metrics. The project validates the ability to build a data pipeline solution (Advanced SQL → ETL with Python → Visualization with Power BI) to generate business intelligence about user behavior.
+
+---
+
+## 2. Architecture and Methodology (SQL and ETL)
+
+The information was extracted from the `ratings` table (PostgreSQL) and transformed into key metrics for time series analysis.
+
+### SQL Code and Window Functions
+
+The analytical complexity lies in the SQL:
+* `Agregacion_Datos_Proyecto7.sql`: Data aggregation by month and calculation of the average rating.
+* `Tendencias_Acumulativas_Proyecto7.sql`: Uses a window function (`SUM() OVER (...)`) to calculate the running total of historical ratings, a vital metric for the growth curve.
+
+### Extract, Transform, Load (ETL) script
+* `tendencias_series_tiempo.py`: Executes the SQL query, handles nulls (`.fillna(0)`), forces the float data type to avoid scaling issues during export, and saves the result to `tendencias_series_tiempo.csv`.
+* Security: Database credentials are managed in the `config.py` file, ensuring that no sensitive data is exposed in the main code. 
+
+---
+
+## 3. Visualization and Conclusions (Power BI)
+
+The `tendencias_series_tiempo.csv` file was imported into Power BI to create an executive dashboard that reveals key patterns:
+
+### Historical Growth Curve (Cumulative Ratings)
+This line visualization shows the platform's overall growth trajectory over the years. It is the primary metric for evaluating database maturity.
+
+![Historical Growth Curve](assets/curva_crecimiento.png)
+
+* **Analysis**: The curve shows an initial phase of rapid growth followed by stabilization as the project matures, before taking off again around 2015.
+
+### Annual Seasonality Pattern
+This column chart analyzes year-over-year behavior, averaging the activity across all Januarys, Februarys, etc.
+
+![Annual Seasonality Pattern](assets/estacionalidad_mensual.png)
+
+* **Analysis**: It allows us to identify peak activity months. We can observe that May and November show the highest values, while July shows the lowest values ​​on average.
+
+---
+
+## 4. Repository Structure
+
+```bash
+Proyecto7_Analisis_series_tiempo/
+├── assets/
+│   ├── curva_crecimiento.png    # Chart 1: Cumulative Growth
+│   └── estacionalidad_mensual.png  # Chart 2: Year-over-Year Seasonality
+├── config.py # DB Credentials (IGNORED IN GIT)
+├── Agregacion_Datos_Proyecto7.sql # Time Aggregation SQL
+├── Tendencias_Acumulativas_Proyecto7.sql # SQL with Window Function
+├── tendencias_series_tiempo.csv  # ETL Result (Input for Power BI) IGNORED
+├── tendencias_series_tiempo.py  # ETL Script Python
+└── README.md # Project Documentation
+```
+
+---
+
+## 5. Dataset Citation
+The dataset used for this project is the MovieLens dataset.
+
+F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. https://doi.org/10.1145/2827872.
+
+Downloaded from https://grouplens.org/datasets/movielens/latest/
+
+---
