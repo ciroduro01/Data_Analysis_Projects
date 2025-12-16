@@ -1,4 +1,10 @@
 ## **Portafolio Profesional de Data Science y Análisis Avanzado** (Español)
+![Languages](https://img.shields.io/github/languages/top/ciroduro01/Data_Analysis_Projects)
+![Commits](https://img.shields.io/github/commit-activity/m/ciroduro01/Data_Analysis_Projects)
+![Repo size](https://img.shields.io/github/repo-size/ciroduro01/Data_Analysis_Projects)
+![Last update](https://img.shields.io/github/last-commit/ciroduro01/Data_Analysis_Projects)
+![License](https://img.shields.io/github/license/ciroduro01/Data_Analysis_Projects)
+![Bilingual](https://img.shields.io/badge/Docs-Bilingual-green)
 
 ### **Introducción**
 
