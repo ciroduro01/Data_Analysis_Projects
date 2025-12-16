@@ -138,3 +138,136 @@ F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History a
 Descargado de https://grouplens.org/datasets/movielens/latest/
 
 ---
+
+# Project N°2: ETL and Data Analysis of Movies (MovieLens)
+
+## 1. Objectives and Summary
+
+**Objective**
+This project implements an Extract, Transform, Load (ETL) process using Python and Pandas to process a dataset of over 100,000 ratings and 3,600 movies (MovieLens). The objective is to normalize this data and load it into a PostgreSQL relational database.
+
+**Summary**:
+
+* **ETL**: A Python script (`peliculas.py`) reads multiple CSV files, normalizes the N:M relationship of genres, transforms timestamps, and loads the data into PostgreSQL.
+* **Modeling**: A relational schema is created with tables for Movies, Genres, Ratings, and Tags.
+* **BI**: A dashboard is developed in Power BI connected to the database to analyze rating and popularity trends. 
+
+---
+
+## 2. Technologies Used
+
+| Category | Technology | Specific Use |
+| :--- | :--- | :--- |
+| **Main Language** | Python 3.x | ETL logic, cleaning, and database connection. |
+| **Python Libraries** | Pandas, Psycopg2, io | Data manipulation, connection, and bulk loading to PostgreSQL. |
+| **Database** | PostgreSQL (pgAdmin) | Final storage of transformed data. |
+| **Visualization** | Power BI | Creation of the analytical dashboard and execution of key SQL queries. |
+| **Version Control** | Git / GitHub | Management of source code and change history. |
+
+---
+
+## 3. Key Results and Visualizations
+
+The following key visualizations were created in Power BI, directly connected to the optimized tables and queries in PostgreSQL (pgAdmin):
+
+### 1. Top 10 Popular Movies by Average Rating
+**Description**: Shows the most consistent and highest-rated movies.
+![Top 10 Popular Movies by Average Rating](assets/Proyecto2_Peliculas_Populares.png)
+
+### 2. Catalog Distribution by Genre
+Description: Determines the weight of each genre in the total catalog.
+![Catalog Distribution by Genre](assets/Proyecto2_Catalogo_Genero.png)
+
+### 3. Ranking of Most Active Users
+Description: Identifies the platform's top contributors.
+![Ranking of Most Active Users](assets/Proyecto2_Usuarios_Activos.png)
+
+### 4. Evolution of the Average Annual Rating
+Description: Analyzes the historical trend of the average rating.
+![Evolution of the Average Annual Rating](assets/Proyecto2_Evolucion_Rating.png)
+
+### 5. Most Tagged Movie in 2015
+Description: Shows the movie with the most tag interaction for a specific year.
+![Most Tagged Movie in 2015](assets/Proyecto2_Pelicula_Etiquetada.png)
+
+---
+
+## 4. Methodology (Project Phases, Procedure)
+
+The project was divided into three main phases:
+
+1. **Phase 1: Extraction and Transformation (Python)**
+* **Extraction**: Loading the `movies.csv`, `ratings.csv`, and `tags.csv` files.
+* **Cleaning/Transformation**:
+* Converting the `timestamp` column in `ratings` and `tags` to `datetime` format.
+* **Genre Normalization**: Splitting the `genres` column into multiple rows to create the `generos` and `peliculas_generos` tables (N:M relationship).
+* Adjusting column names to lowercase for PostgreSQL compatibility.
+2. **Phase 2: Loading (PostgreSQL)**
+* **Schema Creation**: Execution of the `Estructura_Proyecto2.sql` script to create the database and the 5 relational tables.
+* **Data Loading**: The `peliculas.py` script connects to PostgreSQL (using `config.py` for credentials) and uses `psycopg2` for bulk loading (`copy_from` function) in the order of table dependencies (Parents first, Children second).
+3. **Phase 3: Analysis (Power BI)**
+* Direct connection to PostgreSQL and use of `Consultas_Proyecto2.sql` to generate the necessary views for the dashboard (e.g., Top 10 by Rating, Most Active Users).
+
+---
+
+## 5. Data Modeling (Relational Schema)
+
+The relational schema was designed with a structure optimized for analysis. The following diagram shows the model:
+
+![ERD Diagram](assets/Proyecto2_Diagrama.png)
+
+**Tables Created**
+
+| Table | Purpose | Primary Key (PK) | Foreign Keys (FK) |
+| :--- | :--- | :--- | :--- |
+| **peliculas** | Movie catalog. | `movieid` | N/A |
+| **generos** | Unique list of genre categories. | `genero_id` | N/A |
+| **peliculas_generos** | Normalizes the M:M relationship. | (`movieid`, `genero_id`) | `peliculas(movieid)`, `generos(genero_id)` |
+| **ratings** | Stores user ratings. | (`userid, movieid`) | `peliculas(movieid)` |
+| **tags** | Stores user-defined tags. | `tag_id` (Serial) | `peliculas(movieid)` |
+
+---
+
+## 6. File Structure
+
+A modular structure is used to separate visual resources, source files (CSV), and code.
+
+```bash
+└── Proyecto2_Peliculas_ETL/
+├── peliculas.py       # Main ETL script
+├── Estructura_Proyecto2.sql   # DB schema creation
+├── Consultas_Proyecto2.sql    # BI queries (SQL)
+├── Código_Adicional_Proyecto2.sql    # Cleanup commands (TRUNCATE)
+├── README.md # Project documentation
+├── Citación.txt # Dataset citation
+├── assets/ # Project visual resources
+     ├── Proyecto2_Peliculas_Populares.png
+     ├── Proyecto2_Catalogo_Genero.png
+     ├── Proyecto2_Usuarios_Activos.png
+     ├── Proyecto2_Evolucion_Rating.png
+     ├── Proyecto2_Pelicula_Etiquetada.png
+     └── Proyecto2_Diagrama.png     # Relational model diagram
+├── data/ # (IGNORED) CSV source files
+    ├── movies.csv
+    ├── ratings.csv
+    └── tags.csv
+└── config.py # (IGNORED) Connection credentials
+```
+
+---
+
+## 7. Conclusions
+
+1. **Successful Normalization**: The ability to normalize unstructured data (concatenated genres) in a Third Normal Form (3NF) relational model to optimize queries was demonstrated.
+2. **Load Performance**: The use of the `copy_from` function in psycopg2 ensures efficient loading of large volumes of data into PostgreSQL.
+3. **Insights**: The dashboard revealed a high concentration of rating activity among a top 5 users and highlighted user preferences for the **Drama** and **Comedy** genres.
+
+---
+
+## 8. Dataset Citation
+
+The dataset used for this project is the MovieLens dataset.
+
+F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. https://doi.org/10.1145/2827872.
+
+Downloaded from https://grouplens.org/datasets/movielens/latest/
