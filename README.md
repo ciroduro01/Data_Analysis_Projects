@@ -57,17 +57,38 @@ El *stack* tecnológico demuestra familiaridad con herramientas esenciales para 
 
 ---
 
-### **4. Cómo Usar el Repositorio**
+### 4. Visualizaciones de Ejemplo
+Para ejemplificar nuestro portafolio, veremos aquí cuatro imágenes, procedentes de diferentes proyectos, para ilustrar el uso de diferentes herramientas de visualización.
+
+En primer lugar, tenemos aquí el Diagrama del esquema de la base de datos `manufactura_db`, procedente del **Proyecto N°6: Dashboard de Business Intelligence con Power BI**. El Diagrama fue realizado con **DBeaver**, luego de haberse conectado con **pgAdmin**.
+
+![Diagrama del Proyecto 6 en DBeaver](Proyecto6_Visualizacion_PowerBI/assets/manufactura_db_esquema.png)
+
+Por otro lado, en la mayoría de los trabajos utilizamos la herramienta **Power BI** para visualizar y comunicar los principales *insights* de nuestro proyecto. En este caso, nos dirigiremos al **Proyecto N°11: Análisis de Sentimientos en Reseñas de Películas**, y veremos el siguiente gráfico de anillo, titulado **Distribución Final de Sentimientos Predichos**, en el que se observa un balance casi perfecto, en el que ambos grupos están separados por sus respectivos colores (verde y rojo).
+
+![Gráfico de Power BI del Proyecto 11](Proyecto_11_Sentimientos_peliculas/assets/sentimientos_predichos.png)
+
+Asimismo, en el **Proyecto N°10: Análisis Geoespacial de Accidentes de Tráfico en el Reino Unido**, trabajamos con la biblioteca **Folium** para generar dos mapas que representan la gravedad de los accidentes en la región. Esta imagen, la cual representa la mirada general de los accidentes, está tomada del archivo HTML adjuntado en la carpeta del proyecto.
+
+![Imagen de Folium correspondiente al Proyecto 10](Proyecto_10_Analisis_geoespacial_UK/folium_uk.png)
+
+Por último, también trabajamos con la biblioteca estándar de visualización para Python, **Matplotlib**. En el **Proyecto N°9: Predicción de Valor de Viviendas**, utilizamos la herramienta para visualizar la distribución geográfica del valor de la vivienda en California. Como resultado, podemos observar la concentración de precios altos cerca de la costa de la región.
+
+![Visualización de Matplotlib del Proyecto 9](Proyecto9_Predicciones_viviendas_California/assets/Distribucion_Vivienda.png)
+
+---
+
+### **5. Cómo Usar el Repositorio**
 
 1. **Clonar el Repositorio:** Utiliza el comando `git clone` estándar y la URL del repositorio.
 2. **Archivos de Datos y Configuración:** Debido al uso de archivos `.gitignore` en cada subdirectorio, el repositorio NO contiene los datasets originales (CSV) ni el archivo de credenciales `config.py`.
-**Acción Requerida**: Para ejecutar los scripts, el usuario debe obtener los datasets citados en el `README.md` de cada proyecto y crear un archivo `config.py` con sus propias credenciales de PostgreSQL.
+* **Acción Requerida**: Para ejecutar los scripts, el usuario debe obtener los datasets citados en el `README.md` de cada proyecto y crear un archivo `config.py` con sus propias credenciales de PostgreSQL.
 3. **Ejecución de Scripts:** Instala las dependencias de Python (listadas en el `README.md` de cada proyecto). Ejecuta el script principal de cada proyecto (ej. el script del Proyecto 12 es `python ecommerce.py`).
 4. **Visualización y Análisis (Power BI):** El resultado de los scripts (archivos `.csv` de salida o la tabla final de PostgreSQL) se usa como fuente de datos para la generación de los *dashboards* de Power BI.
 
 ---
 
-### **5. Licencia**
+### **6. Licencia**
 
 Este proyecto está bajo la licencia **MIT**. Eres libre de usar, modificar y distribuir el código con la atribución adecuada, **siempre y cuando se cite al autor original del repositorio.**
 
