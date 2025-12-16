@@ -76,6 +76,7 @@ Proyecto_10_Analisis_geoespacial_UK
 │   ├── maximo_riesgo_uk.png        # Mapa 2 (Power BI)
 │   └── hora_maximo_riesgo.png      # Gráfico 3 (Power BI)
 ├── Citacion.txt                    # Documento de citación del dataset.
+├── folium_uk.png # Imagen del archivo HTML, creada para el README principal
 └── README.md                       # Documentación principal.
 
 ```
@@ -168,6 +169,7 @@ Proyecto_10_Analisis_geoespacial_UK
 │   ├── maximo_riesgo_uk.png # Map 2 (Power BI)
 │   └── hora_maximo_riesgo.png # Chart 3 (Power BI)
 ├── Citacion.txt # Dataset citation document.
+├── folium_uk.png # Imagen taken from the HTML file, created for the main README
 └── README.md # Main documentation.
 ```
 
